@@ -4,7 +4,7 @@ const timer = function() {
   })
   let timesRequestedAdjusted = timesRequested.map(x => x * 1000)
   timesRequestedAdjusted.forEach(time => {
-    if (time > 0 && typeof time === "number") {
+    if (time >= 0 ) {
       setTimeout(() => {
         process.stdout.write('\x07')
       }, time);
